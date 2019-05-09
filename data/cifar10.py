@@ -1,11 +1,10 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.python.keras.datasets.cifar10 import load_data
-from sklearn.model_selection import train_test_split
 
 NUM_CLASSES = 10
 
-def load_cifar10(normalize=True, one_hot=True, label_reshape=True, validation=False, validation_state=0.2):
+def load_cifar10(normalize=True, one_hot=True, label_reshape=True):
     r'''
     Loading cifar10 by `tf.keras`.
 
@@ -30,7 +29,6 @@ def load_cifar10(normalize=True, one_hot=True, label_reshape=True, validation=Fa
     if label_reshape:
         y_train = y_train.reshape(-1, NUM_CLASSES)
         y_test = y_test.reshape(-1, NUM_CLASSES)
-    if validation:
-        x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=validation_state, random_state=42)
-        return (x_train, y_train), (x_test, y_test), (x_val, y_val)
+
     return (x_train, y_train), (x_test, y_test)
+    
