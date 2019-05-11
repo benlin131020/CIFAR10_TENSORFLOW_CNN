@@ -4,12 +4,12 @@
 https://github.com/benlin131020/CIFAR10_TENSORFLOW_CNN
 
 ## 網路架構
-tensorboard_network_structure.png
+![Alt text](tensorboard_network_structure.png)
 
 ## accuracy & loss
-accuracy.PNG
+![Alt text](accuracy.PNG)
 
-loss.PNG
+![Alt text](loss.PNG)
 
 training data 上的 accuracy 及 loss 尚有上升及下降的空間，需要更多的 epoch 訓練。
 
